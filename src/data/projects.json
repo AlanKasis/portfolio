@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Not Maev",
+    "imgSrc": ["notmaev_01.png", "notmaev_02.png", "notmaev_03.png"],
+    "client": "Not Maev",
+    "roles": "UX/UI Design | Web Development",
+    "year": 2023
+  },
+  {
+    "name": "Kuniverse",
+    "imgSrc": ["kuniverse_01.png", "kuniverse_02.png", "kuniverse_03.png"],
+    "client": "ETER Studios | Kun Aguero",
+    "roles": "Web Development",
+    "year": 2023
+  },
+  {
+    "name": "Alan Kasis",
+    "imgSrc": ["notmaev_01.png", "notmaev_02.png", "notmaev_03.png"],
+    "client": "Alan Kasis",
+    "roles": "Branding | UX/UI Design | Web Development",
+    "year": 2024
+  },
+  {
+    "name": "Ripgang",
+    "imgSrc": ["ripgang_01.png", "ripgang_02.png", "ripgang_01.png"],
+    "client": "Bohemian Groove Corp.",
+    "roles": "Web Development",
+    "year": 2022
+  },
+  {
+    "name": "The Motherplant",
+    "imgSrc": ["motherplant_01.png", "motherplant_02.png", "motherplant_01.png"],
+    "client": "Reefer Rascals",
+    "roles": "Web Development",
+    "year": 2022
+  }
+]

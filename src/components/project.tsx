@@ -2,6 +2,7 @@ import { ProjectProps } from "@/app/projects/page";
 import Image from "next/image";
 import React from "react";
 import { useWindowSize } from "@uidotdev/usehooks";
+import { CSSProperties } from "react";
 
 declare global {
   namespace JSX {
@@ -9,7 +10,10 @@ declare global {
       "swiper-container": React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
-      >;
+      > & {
+        navigation: string;
+        pagination: string;
+      };
       "swiper-slide": React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
@@ -52,7 +56,7 @@ const Project = ({ project }: any) => {
             "--swiper-pagination-bottom": "0rem",
             "--swiper-navigation-size": "12px",
             "--swiper-navigation-color": "#444444",
-          }}
+          } as CSSProperties}
         >
           {project.imgSrc.map((imgSrc: string, index: number) => {
             return (

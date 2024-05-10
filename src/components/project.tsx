@@ -22,7 +22,7 @@ import { register } from "swiper/element/bundle";
 
 register();
 
-const Project = ({ project }: ProjectProps) => {
+const Project = ({ project }: any) => {
   const { width } = useWindowSize();
   return (
     <div className="w-full flex flex-col xl:border-r-2 xl:pr-7">

@@ -1,14 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import {
-  MeshTransmissionMaterial,
-  OrbitControls,
-  Points,
-} from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { usePathname } from "next/navigation";
-import BoxTextBlock from "./box-text-block";
-import ProjectBullet from "./project-bullet";
 
 const BasicParticles = () => {
   // This reference gives us direct access to our points

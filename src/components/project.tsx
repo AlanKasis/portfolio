@@ -1,6 +1,7 @@
 import { ProjectProps } from "@/app/projects/page";
 import Image from "next/image";
 import React from "react";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 declare global {
   namespace JSX {
@@ -22,11 +23,14 @@ import { register } from "swiper/element/bundle";
 register();
 
 const Project = ({ project }: ProjectProps) => {
+  const { width } = useWindowSize();
   return (
-    <div className="w-full flex flex-col border-r-2 pr-7">
-      <div className="grid grid-cols-2 ">
-        <span className="w-full text-2xl font-bold">{project.name}</span>
-        <div className="flex flex-col border-l-2 border-black pl-4">
+    <div className="w-full flex flex-col xl:border-r-2 xl:pr-7">
+      <div className="grid xl:grid-cols-2 ">
+        <span className="w-full text-xl xl:text-2xl font-bold border-b-2 border-black mb-2 xl:m-0 xl:border-0">
+          {project.name}
+        </span>
+        <div className="flex flex-col text-sm xl:border-l-2 border-black xl:pl-4">
           <span className="">Roles: {project.roles}</span>
           <span className="">Client: {project.client}</span>
           <span className="">Year: {project.year}</span>
@@ -35,11 +39,20 @@ const Project = ({ project }: ProjectProps) => {
       <div className="w-full relative object-contain mt-4 shadow-lg">
         <swiper-container
           slides-per-view="1"
-          autoplay-delay="3000"
-          autoplay-disable-on-interaction="true"
-          // navigation="true"
-          loop="true"
-          // pagination="true"
+          // autoplay-delay="3000"
+          navigation="true"
+          // loop="true"
+          pagination="true"
+          style={{
+            "--swiper-pagination-color": "#999999",
+            "--swiper-pagination-bullet-inactive-color": "#DDDDDD",
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "6px",
+            "--swiper-pagination-bullet-horizontal-gap": "6px",
+            "--swiper-pagination-bottom": "0rem",
+            "--swiper-navigation-size": "12px",
+            "--swiper-navigation-color": "#444444",
+          }}
         >
           {project.imgSrc.map((imgSrc: string, index: number) => {
             return (

@@ -4,7 +4,7 @@
 
 .icon-1, .icon-2, .icon-3 {
     position: relative;
-    left: 25%;
+    // left: 25%;
     top: 50%;
     width: 28px;
     height: 3px;
@@ -13,23 +13,26 @@
 }
 
 .icon-1 {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   animation-delay: 100ms;
 }
 
 .icon-3 {
-  transform: translateY(8px);
+  transform: translateY(6px);
   animation-delay: 250ms;
 }
 
 .hamburger-icon {
   position: relative;
-  height: 60px;
-  width: 60px;
+  width: 76px;
   z-index: 10;
   cursor: pointer;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
+
+  @media (max-width: 1250px) {
+    width: 61px;
+  }
 }
 
 .icon-1.a {
@@ -44,4 +47,28 @@
 
 .clear {
   clear: both;
+}
+
+// Scrollbar Customization
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

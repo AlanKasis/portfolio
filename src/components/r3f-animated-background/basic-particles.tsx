@@ -15,6 +15,7 @@ const BasicParticles = () => {
   const count = 2000;
   const points = useRef<any>();
   const menuCameraTarget = useRef<THREE.Mesh>(null!);
+  // const torusKnot = useRef<THREE.Mesh>(null!);
   const [hovered, setHovered] = useState<boolean>(false);
   const pathname = usePathname();
   const particlesPosition = useMemo(() => {
@@ -40,8 +41,13 @@ const BasicParticles = () => {
     return positions;
   }, [count]);
 
+  // if (torusKnot !== null) {
+  //   torusKnot.current.position.set(-5, -3, 9);
+  // }
+
   useFrame((state) => {
     //Camera
+
     state.camera.position.lerp(
       {
         x: pathname == "/menu" ? 0 : 0,
@@ -60,7 +66,17 @@ const BasicParticles = () => {
         },
         0.04
       );
+    } else {
+      menuCameraTarget.current.position.lerp(
+        {
+          x: 0,
+          y: 0,
+          z: 0,
+        },
+        0.04
+      );
     }
+    state.camera.lookAt(menuCameraTarget.current.position);
 
     //Points
 
@@ -74,6 +90,11 @@ const BasicParticles = () => {
       },
       0.04
     );
+
+    // //Torus Knot
+
+    // torusKnot.current.rotation.y =
+    //   state.clock.getElapsedTime() / (pathname == "/projects" ? 12 : 6);
   });
 
   // You can see that, like our mesh, points also takes a geometry and a material,
@@ -99,8 +120,12 @@ const BasicParticles = () => {
       </points>
       <mesh ref={menuCameraTarget}>
         <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="orange" wireframe />
+        <meshStandardMaterial color="orange" transparent opacity={0} />
       </mesh>
+      {/* <mesh ref={torusKnot}>
+        <torusKnotGeometry args={[1, 0.2, 200, 6, 2, 3]} />
+        <meshStandardMaterial color="orange" />
+      </mesh> */}
       {/* {pathname == "/projects" && <BoxTextBlock position={[0, 0, 0]} />} */}
       {/* {pathname == "/projects" && <ProjectBullet />} */}
     </>

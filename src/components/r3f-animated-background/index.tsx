@@ -1,10 +1,10 @@
 "use client";
 
-import React, { SyntheticEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import Experience from "./experience";
 import BasicParticles from "./basic-particles";
 import { useRouter, usePathname } from "next/navigation";
+import { Environment } from "@react-three/drei";
 
 const R3fAnimatedBackground = () => {
   const [scrollPaused, setScrollPaused] = useState<boolean>(false);
@@ -49,6 +49,7 @@ const R3fAnimatedBackground = () => {
       onWheel={(e) => handleScroll(e)}
     >
       <Canvas>
+        {/* <Environment preset="city" /> */}
         <BasicParticles />
       </Canvas>
     </div>

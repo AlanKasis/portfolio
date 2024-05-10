@@ -28,6 +28,10 @@ export const NavbarProvider = ({ children }: NavbarContextProviderProps) => {
   };
 
   useEffect(() => {
+    if (pathname == "/menu") {
+      setNavbar(true);
+      return
+    }
     setNavbar(false);
   }, [pathname]);
 

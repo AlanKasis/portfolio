@@ -8,8 +8,8 @@ interface AnimatedLinkProps {
 
 const AnimatedLink = ({ content, href }: AnimatedLinkProps) => {
   return (
-    <li className="py-10">
-      <Link className="text-6xl" href={href}>
+    <li className="py-6 lg:py-10 animate-fadein">
+      <Link className="text-4xl lg:text-6xl" href={href}>
         {content}
       </Link>
     </li>

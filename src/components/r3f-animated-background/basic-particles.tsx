@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const BasicParticles = () => {
   // This reference gives us direct access to our points
-  const count = 2000;
+  const count = 1000;
   const points = useRef<any>();
   const menuCameraTarget = useRef<THREE.Mesh>(null!);
   // const torusKnot = useRef<THREE.Mesh>(null!);

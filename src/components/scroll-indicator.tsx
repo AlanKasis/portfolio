@@ -9,7 +9,7 @@ const ScrollIndicator = () => {
   const currentPathname = usePathname();
   const pathnames = ["/", "/about", "/projects", "/contact"];
 
-  if (currentPathname !== "/contact") {
+  if (!["/contact", "/menu"].includes(currentPathname)) {
       return (
         <div
           className="animate-fadein z-20 absolute bottom-10 w-full text-center hover:animate-pulse cursor-pointer"

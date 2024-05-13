@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import BasicParticles from "./basic-particles";
 import { useRouter, usePathname } from "next/navigation";
 import { Environment } from "@react-three/drei";
+import * as THREE from 'three'
 
 const R3fAnimatedBackground = () => {
   const [scrollPaused, setScrollPaused] = useState<boolean>(false);
@@ -48,7 +49,7 @@ const R3fAnimatedBackground = () => {
       className="absolute w-[100vw] h-[100%] flex justify-center items-center top-0 left-0"
       onWheel={(e) => handleScroll(e)}
     >
-      <Canvas>
+      <Canvas >
         {/* <Environment preset="city" /> */}
         <BasicParticles />
       </Canvas>

@@ -7,6 +7,8 @@ import R3fAnimatedBackground from "@/components/r3f-animated-background";
 import Image from "next/image";
 import Script from "next/script";
 import ScrollIndicator from "@/components/scroll-indicator";
+import { Suspense } from "react";
+import Loading from "@/components/loading";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 const sen = Sen({ subsets: ["latin"], display: "swap" });
@@ -27,9 +29,10 @@ export default function RootLayout({
         <body className={`${sen.className}`}>
           <Header />
           <div className="container">{children}</div>
-
-          <R3fAnimatedBackground />
-          <ScrollIndicator />
+          <Suspense fallback={<Loading />}>
+            <R3fAnimatedBackground />
+            <ScrollIndicator />
+          </Suspense>
           <Script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" />
         </body>
       </Providers>

@@ -19,8 +19,8 @@ const Header = () => {
   }
 
   return (
-    <div className="relative md:text-xl w-full h-[40px] flex justify-between items-center p-4 py-10 md:p-10 absolute top-0 z-40 ">
-      <div className="hamburger-icon" id="icon" onClick={handleNavbarToggle}>
+    <div className="relative md:text-xl w-full h-[40px] flex justify-between items-center p-4 py-10 md:p-10 absolute top-0 z-40" onClick={handleNavbarToggle}>
+      <div className="hamburger-icon" id="icon">
         <div className={`icon-1 ${navbar ? "a" : ""}`} id="a"></div>
         <div className={`icon-2 ${navbar ? "c" : ""}`} id="b"></div>
         <div className={`icon-3 ${navbar ? "b" : ""}`} id="c"></div>

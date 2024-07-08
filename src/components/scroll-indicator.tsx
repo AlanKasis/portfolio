@@ -12,7 +12,7 @@ const ScrollIndicator = () => {
   if (!["/contact", "/menu"].includes(currentPathname)) {
       return (
         <div
-          className="animate-fadein z-20 absolute bottom-10 w-full text-center hover:animate-pulse cursor-pointer"
+          className="hidden lg:block animate-fadein z-20 absolute bottom-10 w-full text-center hover:animate-pulse cursor-pointer"
           onClick={() =>
             router.push(pathnames[pathnames.indexOf(currentPathname) + 1])
           }

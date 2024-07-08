@@ -17,7 +17,9 @@ declare global {
       "swiper-slide": React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
-      >;
+      > & {
+        lazy: string;
+      };
     }
   }
 }
@@ -60,7 +62,7 @@ const Project = ({ project }: any) => {
         >
           {project.imgSrc.map((imgSrc: string, index: number) => {
             return (
-              <swiper-slide key={`slide-${index}`}>
+              <swiper-slide key={`slide-${index}`} lazy="true">
                 <Image
                   src={`/${imgSrc}`}
                   alt="Not Maev Project Image"

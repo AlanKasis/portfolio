@@ -12,7 +12,6 @@ const R3fAnimatedBackground = () => {
   const pathnames = ["/", "/about", "/projects", "/contact"];
   const currentPathname = usePathname();
   const router = useRouter();
-  console.log(pathnames.indexOf(currentPathname));
 
   //Scrolling capture and routing logic
   const handleScroll = (e: React.WheelEvent) => {

@@ -14,8 +14,8 @@
     "year": 2023
   },
   {
-    "name": "Portfolio",
-    "imgSrc": ["notmaev_01.png", "notmaev_02.png", "notmaev_03.png"],
+    "name": "Alan Kasis",
+    "imgSrc": ["alankasis_01.png", "alankasis_02.png", "alankasis_03.png"],
     "client": "Alan Kasis",
     "roles": "UX/UI Design | Web Development",
     "year": 2024
@@ -28,10 +28,17 @@
     "year": 2022
   },
   {
-    "name": "The Motherplant",
-    "imgSrc": ["motherplant_01.png", "motherplant_02.png", "motherplant_01.png"],
-    "client": "Reefer Rascals",
+    "name": "Eternitee",
+    "imgSrc": ["eternitee_01.png", "eternitee_02.png", "eternitee_03.png"],
+    "client": "ETER Studios",
     "roles": "Web Development",
-    "year": 2022
+    "year": 2024
+  },
+  {
+    "name": "Almost Summer",
+    "imgSrc": ["almost_summer_01.png", "almost_summer_02.png", "almost_summer_03.png"],
+    "client": "Almost Summer",
+    "roles": "Web Development",
+    "year": 2024
   }
 ]

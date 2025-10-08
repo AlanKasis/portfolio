@@ -9,7 +9,7 @@ const About = (props: AboutProps) => {
       <div className="animate-fadein lg:w-1/2 z-20 absolute xl:translate-y-1/2 top-1/3 flex flex-wrap justify-center items-center flex-column px-10 space-y-4">
         <span className="w-full md:text-3xl text-2xl font-bold">Nice to meet you! I&apos;m Alan Kasis</span>
         <span className="w-full text-lg md:text-xl">
-          I&apos;m a Frontend Developer based in Buenos Aires, Argentina.
+          I&apos;m a Software Engineer based in Buenos Aires, Argentina.
         </span>
         <span className="w-full text-lg md:text-xl">
           I&apos;ll build your brand an interactive digital experience your users will love.
